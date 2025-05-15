@@ -34,6 +34,7 @@ header::before {
 
 
 .container {
+    max-width: 1300px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -57,18 +58,18 @@ header::before {
     
 }
 
-.logo_header {
+.nav_bar_logo {
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     padding-right: 1rem;
 }
-.logo_header img {
+.nav_bar_logo img {
     width: 140px;
     transition: all 0.5s;
 }
-.logo_header img:hover {
+.nav_bar_logo img:hover {
     transform: scale(1.025);
 }
 .nav_bar_menu {
@@ -184,6 +185,14 @@ header::before {
 }
 
 @media (max-width: 950px){
+    .nav_bar_ham_menu {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 1rem;
+    }
+
     .ham_menu {
         display: flex;
         flex-direction: column;
@@ -236,7 +245,7 @@ header::before {
 
     .nav_bar_menu.active {
         position: absolute;
-        width: 60%;
+        width: 100vw;
         height: 100vh;
         top: 0;
         right: 0;
@@ -274,3 +283,7 @@ header::before {
         background-color: #000;
     }
 }
+
+
+/* MAIN - FIRST SECTION */
+
