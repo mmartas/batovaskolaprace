@@ -75,7 +75,8 @@ header::before {
     height: 100%;
     display: flex;
     align-items: center;
-    padding: 0 1rem;
+    padding-left: 1rem;
+    width: 900px;
 }
 
 .nav_bar_menu ul {
@@ -85,6 +86,7 @@ header::before {
     list-style: none;
     display: flex;
     align-items: center;
+    width: 100%;
 }
 
 .nav_bar_menu ul li {
@@ -99,8 +101,27 @@ header::before {
     font-size: 1.5rem;
     color: #000;
     position: relative;
+    font-family: "League Spartan";
 }
-.nav_bar_menu ul li a::after {
+.nav_bar_menu ul li:last-child {
+    margin-left: auto;
+    margin-right: 0;
+}
+.nav_bar_menu ul li:last-child a {
+    border: 2px solid #000;
+    font-size: 1.5rem;
+    padding: 1rem 1rem;
+    border-radius: 15px;
+    font-family: "League Spartan";
+    color: #000;
+    transition: all 0.5s ease;
+    background: transparent;
+}
+.nav_bar_menu ul li:last-child a:hover {
+    border-color: var(--orange);
+    color: var(--orange);
+}
+.nav_bar_menu ul li:not(:last-child) a::after {
     background-color: var(--orange);
     height: 6px;
     width: 6px;
@@ -114,7 +135,7 @@ header::before {
     transition: all 0.3s ease;
 }
 
-.nav_bar_menu ul li a:hover::after{
+.nav_bar_menu ul li:not(:last-child) a:hover::after{
     background-color: var(--orange);
     height: 6px;
     width: 6px;
@@ -128,29 +149,6 @@ header::before {
     transition: all 0.3s ease;
 }
 
-.support_btn {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    padding-left: 1rem;
-}
-
-.support_btn button {
-    font-size: 1.5rem;
-    padding: 1rem 1rem;
-    border-radius: 15px;
-    font-family: "League Spartan";
-    text-transform: uppercase;
-    border: 2px solid #000;
-    background-color: var(--orange);
-    cursor: pointer;
-    color: #000;
-    transition: all 0.5s ease;
-}
-.support_btn button:hover {
-    background-color: #ff3c00;
-    transform: scaleX(1.025);
-}
 
 .main_title_container {
     height: calc(100vh - 140px);
@@ -176,14 +174,16 @@ header::before {
     font-size: 10rem;
     letter-spacing: 10px;
     color: #000000;
+    font-family: "League Spartan";
 }
 
 .main_title h2 {
     font-size: 6rem;
     color: var(--orange);
+    font-family: "League Spartan";
 }
 
-@media (max-width: 910px){
+@media (max-width: 950px){
     .ham_menu {
         display: flex;
         flex-direction: column;
@@ -193,12 +193,12 @@ header::before {
         border: 2px solid #000;
         padding: 1rem;
         border-radius: 15px;
-        background-color: var(--orange);
+        background: transparent;
         transition: all 0.5s ease;
     }
 
     .ham_menu:hover {
-        background-color: #ff3c00;
+        background-color: var(--orange);
     }
 
     .ham_menu span {
@@ -230,7 +230,6 @@ header::before {
         top: 0;
         right: -300px;
         background-color: var(--orange);
-        justify-content: end;
         z-index: 1;
         transition: all 0.5s ease;
     }
@@ -242,12 +241,12 @@ header::before {
         top: 0;
         right: 0;
         background-color: var(--orange);
-        justify-content: end;
         z-index: 1;
     }
     .nav_bar_menu ul {
         display: flex;
         flex-direction: column;
+        justify-content: center;
         padding: 1rem 0;
         gap: 20px;
     }
@@ -255,5 +254,23 @@ header::before {
     .nav_bar_menu ul li {
         height: auto;
         padding: 1rem 0;
+    }
+
+    .nav_bar_menu ul li:last-child {
+        margin: 0;
+    }
+
+    .nav_bar_menu ul li:last-child a:hover {
+    border-color: #000;
+    color: #000;
+    }
+
+    .nav_bar_menu ul li:not(:last-child) a::after {
+    background-color: #000;
+    
+    }
+
+    .nav_bar_menu ul li:not(:last-child) a:hover::after{
+        background-color: #000;
     }
 }
