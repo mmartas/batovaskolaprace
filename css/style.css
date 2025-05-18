@@ -153,7 +153,7 @@ header::before {
 
 
 .main_title_container {
-    height: calc(100vh - 140px);
+    height: calc((100vh - 140px) * 0.7);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -382,7 +382,7 @@ header::before {
     transform: rotate(90deg);
     top: 153px;
     left: -124.5px;
-    z-index: 110;
+    z-index: 1;
 }
 
 .line_corner_right_up {
@@ -403,57 +403,60 @@ header::before {
 /* MAIN - FIRST SECTION */
 
 main {
+    background: linear-gradient(to top, var(--gray), rgba(255, 255, 255, 0.9));
+    width: 100%;
     display: flex;
-    justify-content: center;
+    align-items: center;
     flex-direction: column;
 }
 
 .celebration {
-    max-width: 1600px;
+    max-width: 1300px;
     width: 100%;
-    background: linear-gradient(to top, var(--gray), rgba(255, 255, 255, 0.9));
+    height: 500px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
+    padding: 0 1rem;
     position: relative;
-
-}
-
-.celebration img {
-    width: 80%;
-    transform: translateY(-130px);
-    z-index: 12;
-}
-
-.celebratin_title_text {
-    display: flex;
-    justify-content: center;
 }
 
 .celebration_title {
-    max-width: 1300px;
+    position: relative;
+}
+
+.celebration_title img {
+    position: absolute;
+    top: -200%;
+    left: -10%;
+    z-index: 50;
+    width: 80%;
+}
+
+.celebration_title_text {
     width: 100%;
     display: flex;
     gap: 30px;
     align-items: end;
-    position: absolute;
-    top: 50px;
-    z-index: 13;
-    padding: 0 1rem;
-
+    z-index: 100;
+    position: relative;
+    margin-top: 30px;
 }
-
-.celebration_title h2 {
+.celebration_title_text h2 {
     font-size: 3.5rem;
     text-transform: uppercase;
     margin: 0;
 }
 
-.celebration_title p {
+.celebration_title_text p {
     font-size: 2.5rem;
     font-weight: 300;
     margin: 0;
 }
+
+
+
+
 
 .liner_straight_celebration_down {
     height: 5px;
@@ -468,15 +471,8 @@ main {
     z-index: 10;
 }
 
-.celebration_text_container_flex {
-    display: flex;
-    justify-content: center;
-}
 .celebratin_text_container {
-    max-width: 1300px;
     width: 100%;
-    padding: 0 1rem;
-    transform: translateY(-100px);
     font-size: 2rem;
     font-weight: 300;
     line-height: 1.2;
@@ -494,8 +490,8 @@ main {
     margin: 0;
     position: absolute;
     transform: rotate(90deg);
-    bottom: 0px;
-    right: -20px;
+    bottom: -48px;
+    right: -88px;
     z-index: 10;
 }
 
@@ -506,14 +502,69 @@ main {
     border: none;
     margin: 0;
     position: absolute;
-    bottom: 48px;
-    right: 28px;
+    bottom: 0px;
+    right: -40px;
     z-index: 10;   
 }
 
 
 .gallery {
-    background-color: var(--gray);
-    height: 100px;
-    width: 100vw;
+    
+}
+
+@media (max-width: 950px) {
+    .celebration_title h2{
+        font-size: 2.5rem;
+    }
+
+    .celebration_title p{
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 1230px) {
+    .celebration_title img {
+        top: -175%;
+    }
+}
+
+@media (max-width: 1000px) {
+    .celebration_title img {
+            top: -130%;
+    }
+    .celebration{
+        height: 600px;
+    }
+}
+
+@media (max-width: 750px) {
+    .celebration_title img {
+            top: -100%;
+    }
+    .celebration{
+        height: 700px;
+    }
+    
+
+}
+
+@media (max-width: 610px) {
+    .celebration_title h2{
+        font-size: 2rem;
+    }
+
+    .celebration_title p{
+        font-size: 1.5rem;
+    }
+    .celebration_title img {
+            top: -60%;
+    }
+
+    .celebration_title img {
+        width: 90%;
+    }
+
+    .celebration {
+        height: 800px;
+    }
 }
