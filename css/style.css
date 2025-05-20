@@ -396,11 +396,12 @@ main {
 .celebration {
     max-width: 1300px;
     width: 100%;
-    height: 500px;
+    height: 700px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: flex-start;
     position: relative;
+    gap: 90px;
 }
 
 .celebration_title {
@@ -474,7 +475,7 @@ main {
     margin: 0;
     position: absolute;
     transform: rotate(90deg);
-    bottom: -48px;
+    bottom: 180px;
     right: -88px;
     z-index: 10;
 }
@@ -486,7 +487,7 @@ main {
     border: none;
     margin: 0;
     position: absolute;
-    bottom: 0px;
+    bottom: 228px;
     right: -40px;
     z-index: 10;   
 }
@@ -556,7 +557,7 @@ main {
 .gallery {
     max-width: 1300px;
     width: 100%;
-    height: 500px;
+    height: 600px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -570,7 +571,7 @@ main {
 .gallery_title img {
     position: absolute;
     top: -200%;
-    left: -10%;
+    left: 30%;
     z-index: 50;
     width: 80%;
 }
@@ -584,17 +585,46 @@ main {
     position: relative;
     margin-top: 30px;
     padding: 0 1rem;
+    justify-content: end;
 }
 .gallery_title_text h2 {
     font-size: 3.5rem;
     text-transform: uppercase;
     margin: 0;
 }
+.gallery_photoline {
+    overflow: hidden;
+    width: 100%;
+    padding: 0 1rem;
+}
+
 
 .gallery_photos {
-    width: 100%;
     display: flex;
-    flex-wrap: wrap;
+    gap: 10px;
+    width: fit-content;
+    
+    align-items: center;
+    transform: translateX(0);
+    transition: all 0.5s;
+}
+
+.rolling_photos_right{
+    transform: translateX(-140px);
+    transition: all 0.5s;
+}
+
+.fa-solid.fa-arrow-right {
+    position: absolute;
+    top: 380px;
+    right: -120px;
+    cursor: pointer;
+}
+.fa-solid.fa-arrow-left {
+    position: absolute;
+    top: 380px;
+    left: -120px;
+    cursor: pointer;
 }
 
 .gallery_photos .image1,
@@ -608,6 +638,35 @@ main {
 .gallery_photos .image9,
 .gallery_photos .image10 {
     overflow: hidden;
+    
+}
+
+.gallery_photos img {
+    width: 450px;
+    height: auto;
+    opacity: 0.5;
+    transform: scale(1.25);
+    transition: all 0.5s;
+}
+
+
+.gallery_photos img:hover {
+    opacity: 1;
+    transform: scale(1);
+    
+}
+
+.liner_under_gallery_title_straight {
+    height: 5px;
+    background-color: var(--orange);
+    width: 150px;
+    border: none;
+    margin: 0;
+    position: absolute;
+    transform: rotate(90deg);
+    top: 153px;
+    right: -110px;
+    z-index: 1;
 }
 
 .gallery_photos .image1 {
