@@ -383,8 +383,7 @@ header::before {
 }
 
 
-/* MAIN - FIRST SECTION */
-
+/* MAIN */
 main {
     background: linear-gradient(to top, var(--gray), rgba(255, 255, 255, 0.9));
     width: 100%;
@@ -393,10 +392,9 @@ main {
     flex-direction: column;
 }
 
-.celebration {
+.one_section {
     max-width: 1300px;
     width: 100%;
-    height: 700px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -404,11 +402,11 @@ main {
     gap: 90px;
 }
 
-.celebration_title {
+.one_section_title {
     position: relative;
 }
 
-.celebration_title img {
+.one_section_paper_bg_left {
     position: absolute;
     top: -200%;
     left: -10%;
@@ -416,7 +414,15 @@ main {
     width: 80%;
 }
 
-.celebration_title_text {
+.one_section_paper_bg_right {
+    position: absolute;
+    top: -200%;
+    left: 30%;
+    z-index: 50;
+    width: 80%;
+}
+
+.one_section_title_text_left {
     width: 100%;
     display: flex;
     gap: 30px;
@@ -425,34 +431,37 @@ main {
     position: relative;
     margin-top: 30px;
     padding: 0 1rem;
+    justify-content: flex-start;
 }
-.celebration_title_text h2 {
+
+.one_section_title_text_right {
+    width: 100%;
+    display: flex;
+    gap: 30px;
+    align-items: end;
+    z-index: 100;
+    position: relative;
+    margin-top: 30px;
+    padding: 0 1rem;
+    justify-content: flex-end;
+}
+
+.one_section_title_text_right h2,
+.one_section_title_text_left h2 {
     font-size: 3.5rem;
     text-transform: uppercase;
     margin: 0;
 }
 
-.celebration_title_text p {
+.one_section_title_text_right p,
+.one_section_title_text_left p {
     font-size: 2.5rem;
     font-weight: 300;
     margin: 0;
 }
 
-
-
-
-
-.liner_straight_celebration_down {
-    height: 5px;
-    background-color: var(--orange);
-    width: 200px;
-    border: none;
-    margin: 0;
-    position: absolute;
-    transform: rotate(90deg);
-    top: 200px;
-    left: -87px;
-    z-index: 10;
+.celebration {
+    height: 800px;
 }
 
 .celebratin_text_container {
@@ -466,34 +475,6 @@ main {
 .celebratin_text_container p {
     margin: 0;
 }
-
-.liner_corner_celebration_down {
-    height: 5px;
-    background-color: var(--orange);
-    width: 100px;
-    border: none;
-    margin: 0;
-    position: absolute;
-    transform: rotate(90deg);
-    bottom: 180px;
-    right: -88px;
-    z-index: 10;
-}
-
-.liner_corner_celebration_straight {
-    height: 5px;
-    background-color: var(--orange);
-    width: 200px;
-    border: none;
-    margin: 0;
-    position: absolute;
-    bottom: 228px;
-    right: -40px;
-    z-index: 10;   
-}
-
-
-
 
 @media (max-width: 950px) {
     .celebration_title h2{
@@ -552,52 +533,15 @@ main {
     }
 }
 
-
-
 .gallery {
-    max-width: 1300px;
-    width: 100%;
-    height: 600px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    position: relative;
+    height: 900px;
 }
 
-.gallery_title {
-    position: relative;
-}
-
-.gallery_title img {
-    position: absolute;
-    top: -200%;
-    left: 30%;
-    z-index: 50;
-    width: 80%;
-}
-
-.gallery_title_text {
-    width: 100%;
-    display: flex;
-    gap: 30px;
-    align-items: end;
-    z-index: 100;
-    position: relative;
-    margin-top: 30px;
-    padding: 0 1rem;
-    justify-content: end;
-}
-.gallery_title_text h2 {
-    font-size: 3.5rem;
-    text-transform: uppercase;
-    margin: 0;
-}
 .gallery_photoline {
     overflow: hidden;
     width: 100%;
     padding: 0 1rem;
 }
-
 
 .gallery_photos {
     display: flex;
@@ -649,53 +593,130 @@ main {
     transition: all 0.5s;
 }
 
-
 .gallery_photos img:hover {
     opacity: 1;
     transform: scale(1);
     
 }
 
-.liner_under_gallery_title_straight {
+.contact {
+    height: 600px;
+}
+
+.contact_types {
+    display: flex;
+    width: 100%;
+}
+
+.contact_one_type {
+    width: 25%;
+    gap: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact_one_type .icon {
+    display: flex;
+    justify-content: center;
+    font-size: 3rem;
+    
+}
+
+.contact_one_type .icon i:hover {
+    cursor: pointer;
+    color: var(--orange);
+}
+
+.contact_one_type .text {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+.contact_one_type .text p {
+    margin: 0;
+}
+
+
+/*LINES*/
+.one_straight_line {
     height: 5px;
     background-color: var(--orange);
-    width: 150px;
+    /* width: 150px; */
+    border: none;
+    margin: 0;
+    position: absolute;
+    z-index: 1;
+    /* top: 0;
+    left: 0; */
+}
+
+.one_down_up_line {
+    height: 5px;
+    background-color: var(--orange);
+    /* width: 150px; */
     border: none;
     margin: 0;
     position: absolute;
     transform: rotate(90deg);
-    top: 153px;
-    right: -110px;
     z-index: 1;
+    /* top: 0;
+    left: 0; */
 }
 
-.gallery_photos .image1 {
-    
+/*LINES - celebration*/
+.left_celebration_line {
+    width: 150px;
+    top: 153px;
+    left: -124.5px;
 }
-.gallery_photos .image2 {
-    
+
+/*LINES - gallery*/
+.right_gallery_line_straight {
+    width: 200px;
+    top: -300px;
+    right: -40px;
 }
-.gallery_photos .image3 {
-    
+
+.right_gallery_line_higher {
+    width: 100px;
+    top: -252px;
+    right: -88px;
 }
-.gallery_photos .image4 {
-    
+
+.right_gallery_line {
+    width: 150px;
+    top: 153px;
+    right: -110px;
 }
-.gallery_photos .image5 {
-    
+
+/*LINES - contact*/
+.left_contact_line_straight {
+    width: 230px;
+    top: -288px;
+    left: -77px;
 }
-.gallery_photos .image6 {
-    
+
+.left_contact_line_higher {
+    width: 100px;
+    top: -240px;
+    left: -124.5px;
 }
-.gallery_photos .image7 {
-    
+
+.left_contact_line {
+    width: 150px;
+    top: 153px;
+    left: -124.5px;
 }
-.gallery_photos .image8 {
-    
+
+.right_contact_line {
+    width: 150px;
+    top: 430px;
+    right: -110px;
 }
-.gallery_photos .image9 {
-    
-}
-.gallery_photos .image10 {
-    
+
+.right_contact_line_straight {
+    width: 150px;
+    top: 503px;
+    right: -36px;
 }
