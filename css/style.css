@@ -637,6 +637,60 @@ main {
     margin: 0;
 }
 
+footer {
+    background-image: url(../img/background.jpg);
+    background-size: cover;
+    height: 250px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.footer_container {
+    max-width: 1300px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer_link_section {
+
+}
+
+.footer_links {
+
+}
+
+.footer_newsletter {
+
+}
+
+.footer_contact {
+
+}
+
+.footer_contact .icons {
+    
+}
+
+.footer_copyright_section {
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*LINES*/
 .one_straight_line {
