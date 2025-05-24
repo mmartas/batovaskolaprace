@@ -29,3 +29,20 @@ galleryLeftArrow.addEventListener("click", function(event){
     }
     
 })
+
+let arrowToScrollTop = document.getElementById("arrowScrollToTop")
+
+window.addEventListener("scroll", function(event){
+    if(window.scrollY > 600) {
+        arrowToScrollTop.style.display = "block"
+    } else {
+        arrowToScrollTop.style.display = "none"
+    }
+})
+
+arrowToScrollTop.addEventListener("click", function(event){
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    })
+})

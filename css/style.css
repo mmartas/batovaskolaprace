@@ -622,8 +622,11 @@ main {
     
 }
 
+.contact_one_type .icon a {
+    color: #000;
+}
+
 .contact_one_type .icon i:hover {
-    cursor: pointer;
     color: var(--orange);
 }
 
@@ -758,6 +761,7 @@ footer {
     font-size: 1rem;
     border-radius: 15px;
 }
+
 .footer_newsletter form input:nth-child(2) {
     padding: 0.5rem 1rem;
     border-radius: 15px;
@@ -773,7 +777,8 @@ footer {
 }
 
 .footer_newsletter form input:nth-child(2):hover {
-    background-color: var(--orange);
+    border-color: var(--orange);
+    color: var(--orange);
 }
 
 .footer_contact {
@@ -796,6 +801,10 @@ footer {
     gap: 2rem;
 }
 
+.footer_contact .icons .row a{
+    color: #000;
+}
+
 .footer_contact .icons i{
     font-size: 2rem;
 }
@@ -810,20 +819,16 @@ footer {
     margin: 0;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#arrowScrollToTop {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    z-index: 10000;
+    font-size: 2rem;
+    display: none;
+    cursor: pointer;
+    color: #000;
+}
 
 /*LINES*/
 .one_straight_line {
