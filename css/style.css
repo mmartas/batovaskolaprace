@@ -110,9 +110,9 @@ header::before {
     color: var(--orange) !important;
 }
 
-.other_fonts {
+/* .other_fonts {
     color: gray !important;
-}
+} */
 
 .clicked_point::after {
     background-color: var(--orange);
@@ -124,6 +124,7 @@ header::before {
     top: 30px !important;
     left: 50% !important;
     transform: translateX(-50%);
+    opacity: 1 !important;
 }
 
 .nav_bar_menu ul li:last-child {
@@ -761,6 +762,8 @@ footer {
     font-size: 1.3rem;
     width: 100%;
     box-sizing: border-box;
+    z-index: 10;
+    position: relative;
 }
 .footer_newsletter form .inputBox input:valid,
 .footer_newsletter form .inputBox input:focus {
@@ -778,6 +781,7 @@ footer {
     font-weight: 300;
     transform: translate(0, 0);
     transition: all 0.5s;
+    z-index: 9;
 }
 
 .footer_newsletter form .inputBox input:valid ~ p,
@@ -789,6 +793,7 @@ footer {
     padding: 0.2rem 0.5rem;
     font-size: 1rem;
     border-radius: 15px;
+    z-index: 11;
 }
 
 .footer_newsletter form input:nth-child(2) {
