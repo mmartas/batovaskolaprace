@@ -930,10 +930,25 @@ footer {
     transform: rotate(90deg);
     z-index: 1;
 }
-    
-.history_part_1 {
+
+
+.history_one_section {
+    gap: 140px !important;
+}
+
+.history_section_1 {
     height: 700px;
 }
+.history_section_2 {
+    height: 700px;
+}
+.history_section_3 {
+    height: 700px;
+}
+.history_section_4 {
+    height: 700px;
+}
+
 .history_title_text {
     margin-top: 50px !important;
 }
