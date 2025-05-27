@@ -14,21 +14,24 @@ let galleryLine = document.querySelector(".gallery_photos")
 
 let pixelNumber = 0
 
-galleryRightArrow.addEventListener("click", function(event){
+if(galleryRightArrow){
+    galleryRightArrow.addEventListener("click", function(event){
     if(pixelNumber > -3290){
         pixelNumber -= 140
         galleryLine.style.transform = `translateX(${pixelNumber}px)`
     }
-    
 })
+}
 
-galleryLeftArrow.addEventListener("click", function(event){
+if(galleryLeftArrow){
+    galleryLeftArrow.addEventListener("click", function(event){
     if(!pixelNumber == 0){
         pixelNumber += 140
         galleryLine.style.transform = `translateX(${pixelNumber}px)`
     }
-    
 })
+}
+
 
 let arrowToScrollTop = document.getElementById("arrowScrollToTop")
 
@@ -46,3 +49,40 @@ arrowToScrollTop.addEventListener("click", function(event){
         behavior: "smooth"
     })
 })
+
+
+let pointNoZero = document.getElementById("first_point")
+let pointNoOne = document.getElementById("second_point")
+let pointNoTwo = document.getElementById("third_point")
+let pointNoThree = document.getElementById("fourth_point")
+let pointNoFour = document.getElementById("fifth_point")
+
+let historyMainTitle = document.getElementById("historyMainTitle")
+let historyFirstSection = document.getElementById("historySection1")
+let historySecondSection = document.getElementById("historySection2")
+let historyThirdSection = document.getElementById("historySection3")
+let historyFourthSection = document.getElementById("historySection4")
+
+
+let gettingActivePlace = function(point, section){
+    const activatingPoints = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry){
+        if (entry.isIntersecting) {
+            point.classList.add('active');
+        } else {
+            point.classList.remove("active")
+        }
+    });
+    });
+    
+    activatingPoints.observe(section);
+}
+
+gettingActivePlace(pointNoZero, historyMainTitle)
+gettingActivePlace(pointNoOne, historyFirstSection)
+gettingActivePlace(pointNoTwo, historySecondSection)
+gettingActivePlace(pointNoThree, historyThirdSection)
+gettingActivePlace(pointNoFour, historyFourthSection)
+
+
+
