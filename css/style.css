@@ -933,10 +933,14 @@ footer {
 .side_navigator a:nth-child(6) {
     top: 70%;
 }
+.side_navigator a:nth-child(7) {
+    top: 80%;
+}
+
 .history_side_navigator_line {
     height: 5px;
     background-color: var(--orange);
-    width: 180px;
+    width: 300px;
     border: none;
     margin: 0;
     transform: rotate(90deg);
@@ -949,16 +953,16 @@ footer {
 }
 
 .history_section_1 {
-    height: 1000px;
+    height: 1100px;
 }
 .history_section_2 {
-    height: 1000px;
+    height: 1200px;
 }
 .history_section_3 {
-    height: 1000px;
+    height: 1200px;
 }
 .history_section_4 {
-    height: 800px;
+    height: 900px;
 }
 
 .history_title_text {
@@ -974,6 +978,17 @@ footer {
     font-weight: 500;
 }
 
+.history_text_container_photo_left {
+    float: left;
+    width: 400px;
+    margin: 15px 20px 15px 0;
+}
+
+.history_text_container_photo_right {
+    float: right;
+    width: 400px;
+    margin: 15px 0 15px 20px;
+}
 
 /*LINES*/
 .one_straight_line {
