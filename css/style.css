@@ -906,7 +906,7 @@ footer {
     align-items: center;
     font-weight: 300;
     font-size: 1.2rem;
-    color: #000;
+    color: var(--orange);
     transition: all 0.3s;
 }
 
@@ -916,22 +916,28 @@ footer {
     font-size: 1.8rem;
     font-weight: 500;
     transition: all 0.3s;
+    border: 1px solid var(--orange);
+}
+
+#first_point, #sixth_point {
+    background-color: var(--orange);
+    border: none;
 }
 
 .side_navigator a:nth-child(2) {
-    top: 30%;
+    top: 15%;
 }
 .side_navigator a:nth-child(3) {
-    top: 40%;
+    top: 28%;
 }
 .side_navigator a:nth-child(4) {
-    top: 50%;
+    top: 41%;
 }
 .side_navigator a:nth-child(5) {
-    top: 60%;
+    top: 54%;
 }
 .side_navigator a:nth-child(6) {
-    top: 70%;
+    top: 67%;
 }
 .side_navigator a:nth-child(7) {
     top: 80%;
@@ -946,7 +952,6 @@ footer {
     transform: rotate(90deg);
     z-index: 1;
 }
-
 
 .history_one_section {
     gap: 140px !important;

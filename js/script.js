@@ -63,7 +63,7 @@ let historyFirstSection = document.getElementById("historySection1")
 let historySecondSection = document.getElementById("historySection2")
 let historyThirdSection = document.getElementById("historySection3")
 let historyFourthSection = document.getElementById("historySection4")
-let historyFifthSection = document.getElementById("historyFooter")
+let historyFooter = document.getElementById("historyFooter")
 
 
 let gettingActivePlace = function(point, section){
@@ -71,8 +71,18 @@ let gettingActivePlace = function(point, section){
     entries.forEach(function(entry){
         if (entry.isIntersecting) {
             point.classList.add('active');
+            if(point == pointNoOne){
+                point.textContent = "1"
+            } else if(point == pointNoTwo){
+                point.textContent = "2"
+            } else if(point == pointNoThree){
+                point.textContent = "3"
+            } else if(point == pointNoFour){
+                point.textContent = "4"
+            }
         } else {
             point.classList.remove("active")
+            point.textContent = ""
         }
     });
     });
@@ -85,7 +95,7 @@ gettingActivePlace(pointNoOne, historyFirstSection)
 gettingActivePlace(pointNoTwo, historySecondSection)
 gettingActivePlace(pointNoThree, historyThirdSection)
 gettingActivePlace(pointNoFour, historyFourthSection)
-gettingActivePlace(pointNoFive, historyFifthSection)
+gettingActivePlace(pointNoFive, historyFooter)
 
 
 
