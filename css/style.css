@@ -1,3 +1,4 @@
+/* OBECNÉ NASTAVENÍ */
 * {
     box-sizing: border-box;
     scroll-behavior: smooth;
@@ -15,12 +16,13 @@ body {
     --gray: #e7e6e6;
 }
 
+
+/* HEADER */
 header {
     height: 100vh;
     position: relative;
     z-index: 1;
 }
-
 header::before {
     content: "";
     position: absolute;
@@ -32,15 +34,7 @@ header::before {
 }
 
 
-
-
-.container {
-    max-width: 1300px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
+/* HLAVNÍ NAVIGACE */
 .nav_bar_container {
     width: 100%;
     height: 140px;
@@ -73,6 +67,7 @@ header::before {
 .nav_bar_logo img:hover {
     transform: scale(1.025);
 }
+
 .nav_bar_menu {
     height: 100%;
     display: flex;
@@ -97,6 +92,10 @@ header::before {
     align-items: center;
     padding: 0 1rem;
 }
+.nav_bar_menu ul li:last-child {
+    margin-left: auto;
+    margin-right: 0;
+}
 
 .nav_bar_menu ul li a {
     text-decoration: none;
@@ -105,32 +104,6 @@ header::before {
     position: relative;
     font-family: "League Spartan";
     font-weight: 300;
-}
-
-.clicked_font {
-    color: var(--orange) !important;
-}
-
-/* .other_fonts {
-    color: gray !important;
-} */
-
-.clicked_point::after {
-    background-color: var(--orange);
-    height: 6px;
-    width: 6px;
-    border-radius: 50%;
-    content: "";
-    position: absolute !important;
-    top: 30px !important;
-    left: 50% !important;
-    transform: translateX(-50%);
-    opacity: 1 !important;
-}
-
-.nav_bar_menu ul li:last-child {
-    margin-left: auto;
-    margin-right: 0;
 }
 .nav_bar_menu ul li:last-child a {
     border: 1px solid #000;
@@ -146,6 +119,23 @@ header::before {
     border-color: var(--orange);
     color: var(--orange);
 }
+
+.clicked_font {
+    color: var(--orange) !important;
+}
+.clicked_point::after {
+    background-color: var(--orange);
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    content: "";
+    position: absolute !important;
+    top: 30px !important;
+    left: 50% !important;
+    transform: translateX(-50%);
+    opacity: 1 !important;
+}
+
 .nav_bar_menu ul li:not(:last-child) a::after {
     background-color: var(--orange);
     height: 6px;
@@ -159,7 +149,6 @@ header::before {
     opacity: 0;
     transition: all 0.3s ease;
 }
-
 .nav_bar_menu ul li:not(:last-child) a:hover::after{
     background-color: var(--orange);
     height: 6px;
@@ -174,7 +163,119 @@ header::before {
     transition: all 0.3s ease;
 }
 
+@media (max-width: 950px){
+    .nav_bar_ham_menu {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 1rem;
+    }
 
+    .ham_menu {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+        z-index: 2;
+        border: 1px solid #000;
+        padding: 0.9rem;
+        border-radius: 15px;
+        background: transparent;
+        transition: all 0.5s ease;
+    }
+    .ham_menu:hover {
+        background-color: var(--orange);
+    }
+    .ham_menu span {
+        display: block;
+        height: 2px;
+        width: 28px;
+        background-color: #000;
+        transition: all 0.5s ease;
+    }
+    
+    .ham_menu.active span:first-child {
+        background-color: #000 !important;
+        transform: translateY(7px) rotate(45deg);
+    }
+    .ham_menu.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .ham_menu.active span:nth-child(3) {
+        background-color: #000 !important;
+        transform: translateY(-7px) rotate(-45deg);
+    }
+
+    .nav_bar_menu {
+        position: absolute;
+        width: 300px;
+        height: 100vh;
+        top: 0;
+        right: -300px;
+        background-color: var(--orange);
+        z-index: 1;
+        transition: all 0.5s ease;
+    }
+
+    .nav_bar_menu ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 1rem 0;
+        gap: 20px;
+    }
+
+    .nav_bar_menu ul li {
+        height: auto;
+        padding: 1rem 0;
+    }
+    .nav_bar_menu ul li:last-child {
+        margin: 0;
+    }
+
+    .nav_bar_menu ul li:last-child a:hover {
+        border-color: #000;
+        color: #000;
+    }
+    .nav_bar_menu ul li:not(:last-child) a::after {
+        background-color: #000;
+    }
+    .nav_bar_menu ul li:not(:last-child) a:hover::after{
+        background-color: #000;
+    }
+
+    .nav_bar_menu.active {
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        right: 0;
+        background-color: var(--orange);
+        z-index: 1;
+    }
+
+    .nav_bar_logo img {
+        width: 120px;
+    }
+
+    .nav_bar_container {
+        height: 126px;
+    }
+}
+
+@media (max-width: 770px) {
+    .nav_bar_logo img {
+        width: 100px;
+    }
+
+    .nav_bar_container {
+        height: 111px;
+    }
+}
+
+
+/* HLAVNÍ NADPIS */
 .main_title_container {
     height: calc((100vh - 140px) * 0.7);
     display: flex;
@@ -216,124 +317,6 @@ header::before {
     font-weight: 300;
 }
 
-@media (max-width: 950px){
-    .nav_bar_ham_menu {
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-left: 1rem;
-    }
-
-    .ham_menu {
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-        cursor: pointer;
-        z-index: 2;
-        border: 1px solid #000;
-        padding: 0.9rem;
-        border-radius: 15px;
-        background: transparent;
-        transition: all 0.5s ease;
-    }
-
-    .ham_menu:hover {
-        background-color: var(--orange);
-    }
-
-    .ham_menu span {
-        display: block;
-        height: 2px;
-        width: 28px;
-        background-color: #000;
-        transition: all 0.5s ease;
-    }
-    
-    .ham_menu.active span:first-child {
-        background-color: #000 !important;
-        transform: translateY(7px) rotate(45deg);
-    }
-
-    .ham_menu.active span:nth-child(2) {
-        opacity: 0;
-    }
-
-    .ham_menu.active span:nth-child(3) {
-        background-color: #000 !important;
-        transform: translateY(-7px) rotate(-45deg);
-    }
-
-    .nav_bar_menu {
-        position: absolute;
-        width: 300px;
-        height: 100vh;
-        top: 0;
-        right: -300px;
-        background-color: var(--orange);
-        z-index: 1;
-        transition: all 0.5s ease;
-    }
-
-    .nav_bar_menu.active {
-        position: absolute;
-        width: 100vw;
-        height: 100vh;
-        top: 0;
-        right: 0;
-        background-color: var(--orange);
-        z-index: 1;
-    }
-    .nav_bar_menu ul {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding: 1rem 0;
-        gap: 20px;
-    }
-
-    .nav_bar_menu ul li {
-        height: auto;
-        padding: 1rem 0;
-    }
-
-    .nav_bar_menu ul li:last-child {
-        margin: 0;
-    }
-
-    .nav_bar_menu ul li:last-child a:hover {
-    border-color: #000;
-    color: #000;
-    }
-
-    .nav_bar_menu ul li:not(:last-child) a::after {
-    background-color: #000;
-    
-    }
-
-    .nav_bar_menu ul li:not(:last-child) a:hover::after{
-        background-color: #000;
-    }
-
-    .nav_bar_logo img {
-        width: 120px;
-    }
-
-    .nav_bar_container {
-        height: 126px;
-    }
-}
-
-@media (max-width: 770px) {
-    .nav_bar_logo img {
-        width: 100px;
-    }
-
-    .nav_bar_container {
-        height: 111px;
-    }
-}
-
 .liner_corner_main_title_straight {
     height: 5px;
     background-color: var(--orange);
@@ -359,7 +342,7 @@ header::before {
 }
 
 
-/* MAIN */
+/* HLAVNÍ NASTAVENÍ ŠABLONY STRÁNKY */
 main {
     background: linear-gradient(to top, rgba(255, 255, 255, 0.9), var(--gray), rgba(255, 255, 255, 0.9));
     width: 100%;
@@ -456,11 +439,23 @@ main {
     margin: 0;
 }
 
+#arrowScrollToTop {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    z-index: 10000;
+    font-size: 2rem;
+    display: none;
+    cursor: pointer;
+    color: #000;
+}
+
+/* HLAVNÍ STRÁNKA - 1.SEKCE */
 .celebration {
     height: 800px;
 }
 
-
+/* HLAVNÍ STRÁNKA - 2.SEKCE */
 .gallery {
     height: 900px;
 }
@@ -510,7 +505,6 @@ main {
 .gallery_photos .image9,
 .gallery_photos .image10 {
     overflow: hidden;
-    
 }
 
 .gallery_photos img {
@@ -520,13 +514,13 @@ main {
     transform: scale(1.25);
     transition: all 0.5s;
 }
-
 .gallery_photos img:hover {
     opacity: 1;
     transform: scale(1);
     
 }
 
+/* HLAVNÍ STRÁNKA - 3.SEKCE */
 .contact {
     height: 600px;
 }
@@ -568,6 +562,7 @@ main {
     margin: 0;
 }
 
+/* FOOTER */
 footer {
     background: linear-gradient(to top, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.9)), url(../img/background.jpg);
     background-size: cover;
@@ -708,7 +703,6 @@ footer {
     cursor: pointer;
     transition: all 0.5s;
 }
-
 .footer_newsletter form input:nth-child(2):hover {
     border-color: var(--orange);
     color: var(--orange);
@@ -752,16 +746,7 @@ footer {
     margin: 0;
 }
 
-#arrowScrollToTop {
-    position: fixed;
-    bottom: 50px;
-    right: 50px;
-    z-index: 10000;
-    font-size: 2rem;
-    display: none;
-    cursor: pointer;
-    color: #000;
-}
+
 
 /* HISTORIE - SIDE NAVIGATOR */
 #history_side_navigator {
@@ -774,6 +759,7 @@ footer {
     justify-content: center;
     align-items: center;
 }
+
 .side_navigator {
     position: relative;
     height: 50%;
@@ -792,6 +778,7 @@ footer {
     justify-content: center;
     align-items: center;
 }
+
 .one_point {
     position: absolute;
     width: 20px;
