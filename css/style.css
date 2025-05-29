@@ -315,18 +315,6 @@ header::before {
         background-color: #000;
     }
 
-    .main_title #first_word {
-        font-size: 5rem;
-    }
-
-    .main_title #rest_words {
-        font-size: 3rem;
-    }
-
-    .main_title h2 {
-        font-size: 2rem;
-    }
-
     .nav_bar_logo img {
         width: 120px;
     }
@@ -337,18 +325,6 @@ header::before {
 }
 
 @media (max-width: 770px) {
-    .main_title #first_word {
-        font-size: 4rem;
-    }
-
-    .main_title #rest_words {
-        font-size: 2rem;
-    }
-
-    .main_title h2 {
-        font-size: 1.5rem;
-    }
-
     .nav_bar_logo img {
         width: 100px;
     }
@@ -357,22 +333,6 @@ header::before {
         height: 111px;
     }
 }
-
-
-@media (max-width: 610px) {
-    .main_title #first_word {
-        font-size: 3rem;
-    }
-
-    .main_title #rest_words {
-        font-size: 1.5rem;
-    }
-
-    .main_title h2 {
-        font-size: 1.5rem;
-    }
-}
-
 
 .liner_corner_main_title_straight {
     height: 5px;
@@ -396,13 +356,6 @@ header::before {
     top: 153px;
     left: -124.5px;
     z-index: 1;
-}
-
-
-@media (max-width: 770px) {
-    .liner_corner_main_title_straight {
-        top: 60px;
-    }
 }
 
 
@@ -507,62 +460,6 @@ main {
     height: 800px;
 }
 
-@media (max-width: 950px) {
-    .celebration_title h2{
-        font-size: 2.5rem;
-    }
-
-    .celebration_title p{
-        font-size: 2rem;
-    }
-}
-
-@media (max-width: 1230px) {
-    .celebration_title img {
-        top: -175%;
-    }
-}
-
-@media (max-width: 1000px) {
-    .celebration_title img {
-            top: -130%;
-    }
-    .celebration{
-        height: 600px;
-    }
-}
-
-@media (max-width: 750px) {
-    .celebration_title img {
-            top: -100%;
-    }
-    .celebration{
-        height: 700px;
-    }
-    
-
-}
-
-@media (max-width: 610px) {
-    .celebration_title h2{
-        font-size: 2rem;
-    }
-
-    .celebration_title p{
-        font-size: 1.5rem;
-    }
-    .celebration_title img {
-            top: -60%;
-    }
-
-    .celebration_title img {
-        width: 90%;
-    }
-
-    .celebration {
-        height: 800px;
-    }
-}
 
 .gallery {
     height: 900px;
@@ -692,6 +589,7 @@ footer {
     width: 100%;
     display: flex;
     height: 90%;
+    justify-content: center;
 }
 
 .footer_links {
