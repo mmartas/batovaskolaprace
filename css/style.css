@@ -34,6 +34,7 @@ header::before {
 }
 
 
+
 /* HLAVNÍ NAVIGACE */
 .nav_bar_container {
     width: 100%;
@@ -41,6 +42,8 @@ header::before {
     display: flex;
     justify-content: center;
     border-bottom: 2px solid var(--orange);
+    position: relative;
+    z-index: 9999;
 }
 
 .nav_bar {
@@ -122,6 +125,10 @@ header::before {
 
 .clicked_font {
     color: var(--orange) !important;
+}
+.clicked_font_border {
+    border: 1px solid var(--orange) !important
+    ;
 }
 .clicked_point::after {
     background-color: var(--orange);
@@ -752,7 +759,7 @@ footer {
 #history_side_navigator {
     position: fixed;
     width: calc((100vw - 1300px)/2);
-    min-width: 180px;
+    min-width: 300px;
     height: 100vh;
     z-index: 1000;
     display: flex;
@@ -879,6 +886,26 @@ footer {
     width: 400px;
     margin: 15px 0 15px 20px;
 }
+
+/* TOMÁŠ BAŤA - PODSTRÁNKA */
+#header_bata {
+    height: 100vh;
+    position: relative;
+    z-index: 1;
+}
+
+#header_bata::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.9)), url(../img/bata_background.jpg);
+    background-size: cover;
+    /* opacity: 0.6; */
+    z-index: -1;
+}
+
+
+
 
 /*LINES*/
 .one_straight_line {
