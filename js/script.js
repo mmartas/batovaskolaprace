@@ -58,12 +58,12 @@ let pointNoThree = document.getElementById("fourth_point")
 let pointNoFour = document.getElementById("fifth_point")
 let pointNoFive = document.getElementById("sixth_point")
 
-let historyMainTitle = document.getElementById("historyMainTitle")
-let historyFirstSection = document.getElementById("historySection1")
-let historySecondSection = document.getElementById("historySection2")
-let historyThirdSection = document.getElementById("historySection3")
-let historyFourthSection = document.getElementById("historySection4")
-let historyFooter = document.getElementById("historyFooter")
+let historyMainTitle = document.getElementById("MainTitle")
+let historyFirstSection = document.getElementById("Section1")
+let historySecondSection = document.getElementById("Section2")
+let historyThirdSection = document.getElementById("Section3")
+let historyFourthSection = document.getElementById("Section4")
+let historyFooter = document.getElementById("Footer")
 
 
 let gettingActivePlace = function(point, section){
@@ -96,6 +96,3 @@ gettingActivePlace(pointNoTwo, historySecondSection)
 gettingActivePlace(pointNoThree, historyThirdSection)
 gettingActivePlace(pointNoFour, historyFourthSection)
 gettingActivePlace(pointNoFive, historyFooter)
-
-
-

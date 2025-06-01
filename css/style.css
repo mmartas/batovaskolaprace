@@ -349,7 +349,10 @@ header::before {
 }
 
 
-/* HLAVNÍ NASTAVENÍ ŠABLONY STRÁNKY */
+/*
+    HLAVNÍ NASTAVENÍ ŠABLONY STRÁNKY
+*/
+
 main {
     background: linear-gradient(to top, rgba(255, 255, 255, 0.9), var(--gray), rgba(255, 255, 255, 0.9));
     width: 100%;
@@ -444,6 +447,130 @@ main {
 
 .one_section_text_container p {
     margin: 0;
+}
+
+
+#subpage_side_navigator {
+    position: fixed;
+    width: 150px;
+    height: 100vh;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.side_navigator {
+    position: relative;
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.side_navigator a {
+    position: absolute;
+    text-decoration: none;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.one_point {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: var(--gray);
+    border-radius: 50%;
+    z-index: 50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 300;
+    font-size: 1.2rem;
+    color: var(--orange);
+    transition: all 0.3s;
+}
+
+.one_point.active {
+    width: 40px;
+    height: 40px;
+    font-size: 1.8rem;
+    font-weight: 500;
+    transition: all 0.3s;
+    border: 1px solid var(--orange);
+}
+
+#first_point, #sixth_point {
+    background-color: var(--orange);
+    border: none;
+}
+
+.side_navigator a:nth-child(2) {
+    top: 15%;
+}
+.side_navigator a:nth-child(3) {
+    top: 28%;
+}
+.side_navigator a:nth-child(4) {
+    top: 41%;
+}
+.side_navigator a:nth-child(5) {
+    top: 54%;
+}
+.side_navigator a:nth-child(6) {
+    top: 67%;
+}
+.side_navigator a:nth-child(7) {
+    top: 80%;
+}
+
+.subpage_side_navigator_line {
+    height: 300px;
+    background-color: var(--orange);
+    width: 5px;
+    border: none;
+    margin: 0;
+    z-index: 1;
+}
+
+.subpage_text_container_photo_left {
+    float: left;
+    width: 400px;
+    margin: 15px 20px 15px 0;
+}
+
+.subpage_text_container_photo_right {
+    float: right;
+    width: 400px;
+    margin: 15px 0 15px 20px;
+}
+
+.subpage_title_text {
+    margin-top: 50px !important;
+    scroll-margin-top: 120px;
+}
+
+.subpage_title_text p:nth-of-type(2){
+    flex-grow: 1;
+    color: var(--orange);
+    text-align: right;
+    font-size: 3.5rem;
+    font-weight: 500;
+}
+
+.subpage_one_section {
+    gap: 140px !important;
+    height: 800px;
+}
+
+@media (max-width: 1700px) {
+    #subpage_side_navigator {
+        display: none;
+    }
 }
 
 #arrowScrollToTop {
@@ -755,99 +882,8 @@ footer {
 
 
 
-/* HISTORIE - SIDE NAVIGATOR */
-#history_side_navigator {
-    position: fixed;
-    width: calc((100vw - 1300px)/2);
-    min-width: 300px;
-    height: 100vh;
-    z-index: 1000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+/* SUBPAGE HISTORIE */
 
-.side_navigator {
-    position: relative;
-    height: 50%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-.side_navigator a {
-    position: absolute;
-    text-decoration: none;
-    width: 20px;
-    height: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.one_point {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    background-color: var(--gray);
-    border-radius: 50%;
-    z-index: 50;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: 300;
-    font-size: 1.2rem;
-    color: var(--orange);
-    transition: all 0.3s;
-}
-
-.one_point.active {
-    width: 40px;
-    height: 40px;
-    font-size: 1.8rem;
-    font-weight: 500;
-    transition: all 0.3s;
-    border: 1px solid var(--orange);
-}
-
-#first_point, #sixth_point {
-    background-color: var(--orange);
-    border: none;
-}
-
-.side_navigator a:nth-child(2) {
-    top: 15%;
-}
-.side_navigator a:nth-child(3) {
-    top: 28%;
-}
-.side_navigator a:nth-child(4) {
-    top: 41%;
-}
-.side_navigator a:nth-child(5) {
-    top: 54%;
-}
-.side_navigator a:nth-child(6) {
-    top: 67%;
-}
-.side_navigator a:nth-child(7) {
-    top: 80%;
-}
-
-.history_side_navigator_line {
-    height: 5px;
-    background-color: var(--orange);
-    width: 300px;
-    border: none;
-    margin: 0;
-    transform: rotate(90deg);
-    z-index: 1;
-}
-
-.history_one_section {
-    gap: 140px !important;
-}
 
 .history_section_1 {
     height: 1100px;
@@ -862,32 +898,11 @@ footer {
     height: 900px;
 }
 
-.history_title_text {
-    margin-top: 50px !important;
-    scroll-margin-top: 120px;
-}
 
-.history_title_text p:nth-of-type(2){
-    flex-grow: 1;
-    color: var(--orange);
-    text-align: right;
-    font-size: 3.5rem;
-    font-weight: 500;
-}
 
-.history_text_container_photo_left {
-    float: left;
-    width: 400px;
-    margin: 15px 20px 15px 0;
-}
 
-.history_text_container_photo_right {
-    float: right;
-    width: 400px;
-    margin: 15px 0 15px 20px;
-}
 
-/* TOMÁŠ BAŤA - PODSTRÁNKA */
+/* SUBPAGE BAŤA */
 #header_bata {
     height: 100vh;
     position: relative;
@@ -904,6 +919,7 @@ footer {
     z-index: -1;
 }
 
+ 
 
 
 
