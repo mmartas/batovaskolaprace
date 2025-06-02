@@ -310,6 +310,12 @@ header::before {
     font-size: 4rem;
 }
 
+.main_title #rest_words_bata {
+    color: var(--orange);
+    font-size: 6rem;
+    letter-spacing: 15px;
+}
+
 .main_title h1 {
     font-family: "League Spartan";
     text-transform: uppercase;
@@ -504,37 +510,103 @@ main {
     border: 1px solid var(--orange);
 }
 
-#first_point, #sixth_point {
+#first_point, .side_navigator a:last-child span {
     background-color: var(--orange);
     border: none;
 }
-
-.side_navigator a:nth-child(2) {
+.side_navigator_history a:nth-child(2) {
     top: 15%;
 }
-.side_navigator a:nth-child(3) {
+.side_navigator_history a:nth-child(3) {
     top: 28%;
 }
-.side_navigator a:nth-child(4) {
+.side_navigator_history a:nth-child(4) {
     top: 41%;
 }
-.side_navigator a:nth-child(5) {
+.side_navigator_history a:nth-child(5) {
     top: 54%;
 }
-.side_navigator a:nth-child(6) {
+.side_navigator_history a:nth-child(6) {
     top: 67%;
 }
-.side_navigator a:nth-child(7) {
+.side_navigator_history a:nth-child(7) {
     top: 80%;
 }
 
+
+.side_navigator_bata a:nth-child(2) {
+    top: -10%;
+}
+.side_navigator_bata a:nth-child(3) {
+    top:  0%;
+}
+.side_navigator_bata a:nth-child(4) {
+    top: 10%;
+}
+.side_navigator_bata a:nth-child(5) {
+    top: 20%;
+}
+.side_navigator_bata a:nth-child(6) {
+    top: 30%;
+}
+.side_navigator_bata a:nth-child(7) {
+    top: 40%;
+}
+.side_navigator_bata a:nth-child(8) {
+    top: 50%;
+}
+.side_navigator_bata a:nth-child(9) {
+    top: 60%;
+}
+.side_navigator_bata a:nth-child(10) {
+    top: 70%;
+}
+.side_navigator_bata a:nth-child(11) {
+    top: 80%;
+}
+.side_navigator_bata a:nth-child(12) {
+    top: 90%;
+}
+.side_navigator_bata a:nth-child(13) {
+    top: 100%;
+}
+.side_navigator_bata a:nth-child(14) {
+    top: 110%;
+}
+
+
+
+.side_navigator_present a:nth-child(2) {
+    top: 20%;
+}
+.side_navigator_present a:nth-child(3) {
+    top: 33%;
+}
+.side_navigator_present a:nth-child(4) {
+    top: 46%;
+}
+.side_navigator_present a:nth-child(5) {
+    top: 59%;
+}
+.side_navigator_present a:nth-child(6) {
+    top: 72%;
+}
+
 .subpage_side_navigator_line {
-    height: 300px;
     background-color: var(--orange);
     width: 5px;
     border: none;
     margin: 0;
     z-index: 1;
+}
+.subpage_side_navigator_line_bata {
+    height: 120%;
+}
+.subpage_side_navigator_line_history {
+    height: 300px;
+}
+.subpage_side_navigator_line_present {
+    height: 240px;
 }
 
 .subpage_text_container_photo_left {
@@ -898,9 +970,17 @@ footer {
     height: 900px;
 }
 
+/* SUBPAGE SOUČASNOST */
+.present_section_1 {
+    height: 1100px;
+}
 
-
-
+.present_section_2 {
+    height: 900px;
+}
+.present_section_3 {
+    height: 900px;
+}
 
 /* SUBPAGE BAŤA */
 #header_bata {
@@ -919,8 +999,12 @@ footer {
     z-index: -1;
 }
 
- 
-
+.bata_section_6 {
+    height: 900px;
+}
+.bata_section_7 {
+    height: 900px;
+}
 
 
 /*LINES*/
@@ -997,5 +1081,38 @@ footer {
 .right_contact_line_straight {
     width: 150px;
     top: 503px;
+    right: -36px;
+}
+
+.right_history_line {
+    width: 150px;
+    top: 797px;
+    right: -110px;
+}
+.right_history_line_straight {
+    width: 150px;
+    top: 870px;
+    right: -36px;
+}
+
+.right_present_line {
+    width: 150px;
+    top: 727px;
+    right: -110px;
+}
+.right_present_line_straight {
+    width: 150px;
+    top: 800px;
+    right: -36px;
+}
+
+.right_bata_line {
+    width: 150px;
+    top: 707px;
+    right: -110px;
+}
+.right_bata_line_straight {
+    width: 150px;
+    top: 780px;
     right: -36px;
 }

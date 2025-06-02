@@ -57,12 +57,26 @@ let pointNoTwo = document.getElementById("third_point")
 let pointNoThree = document.getElementById("fourth_point")
 let pointNoFour = document.getElementById("fifth_point")
 let pointNoFive = document.getElementById("sixth_point")
+let pointNoSix = document.getElementById("seventh_point")
+let pointNoSeven = document.getElementById("eighth_point")
+let pointNoEight = document.getElementById("ninth_point")
+let pointNoNine = document.getElementById("tenth_point")
+let pointNoTen = document.getElementById("eleventh_point")
+let pointNoEleven = document.getElementById("twelfth_point")
+let pointNoTwelve = document.getElementById("thirteenth_point")
 
 let historyMainTitle = document.getElementById("MainTitle")
 let historyFirstSection = document.getElementById("Section1")
 let historySecondSection = document.getElementById("Section2")
 let historyThirdSection = document.getElementById("Section3")
 let historyFourthSection = document.getElementById("Section4")
+let historyFifthSection = document.getElementById("Section5")
+let historySixthSection = document.getElementById("Section6")
+let historySeventhSection = document.getElementById("Section7")
+let historyEighthSection = document.getElementById("Section8")
+let historyNinthSection = document.getElementById("Section9")
+let historTenthSection = document.getElementById("Section10")
+let historyEleventhSection = document.getElementById("Section11")
 let historyFooter = document.getElementById("Footer")
 
 
@@ -79,6 +93,20 @@ let gettingActivePlace = function(point, section){
                 point.textContent = "3"
             } else if(point == pointNoFour){
                 point.textContent = "4"
+            } else if(point == pointNoFive){
+                point.textContent = "5"
+            } else if(point == pointNoSix){
+                point.textContent = "6"
+            } else if(point == pointNoSeven){
+                point.textContent = "7"
+            } else if(point == pointNoEight){
+                point.textContent = "8"
+            } else if(point == pointNoNine){
+                point.textContent = "9"
+            } else if(point == pointNoTen){
+                point.textContent = "10"
+            } else if(point == pointNoEleven){
+                point.textContent = "11"
             }
         } else {
             point.classList.remove("active")
@@ -94,5 +122,13 @@ gettingActivePlace(pointNoZero, historyMainTitle)
 gettingActivePlace(pointNoOne, historyFirstSection)
 gettingActivePlace(pointNoTwo, historySecondSection)
 gettingActivePlace(pointNoThree, historyThirdSection)
+gettingActivePlace(pointNoTwelve, historyFooter)
 gettingActivePlace(pointNoFour, historyFourthSection)
-gettingActivePlace(pointNoFive, historyFooter)
+gettingActivePlace(pointNoFive, historyFifthSection)
+gettingActivePlace(pointNoSix, historySixthSection)
+gettingActivePlace(pointNoSeven, historySeventhSection)
+gettingActivePlace(pointNoEight, historyEighthSection)
+gettingActivePlace(pointNoNine, historyNinthSection)
+gettingActivePlace(pointNoTen, historTenthSection)
+gettingActivePlace(pointNoEleven, historyEleventhSection)
+
