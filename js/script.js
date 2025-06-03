@@ -63,7 +63,7 @@ let pointNoEight = document.getElementById("ninth_point")
 let pointNoNine = document.getElementById("tenth_point")
 let pointNoTen = document.getElementById("eleventh_point")
 let pointNoEleven = document.getElementById("twelfth_point")
-let pointNoTwelve = document.getElementById("thirteenth_point")
+let pointNoTwelve = document.getElementById("footer_point")
 
 let historyMainTitle = document.getElementById("MainTitle")
 let historyFirstSection = document.getElementById("Section1")
