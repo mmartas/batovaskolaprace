@@ -972,14 +972,14 @@ footer {
 
 /* SUBPAGE SOUČASNOST */
 .present_section_1 {
-    height: 1100px;
+    height: 1300px;
 }
 
 .present_section_2 {
-    height: 900px;
+    height: 1100px;
 }
 .present_section_3 {
-    height: 900px;
+    height: 1000px;
 }
 
 /* SUBPAGE BAŤA */
@@ -1005,6 +1005,40 @@ footer {
 .bata_section_7 {
     height: 900px;
 }
+
+/* SUBPAGE KONTAKT   */
+.contact_page_section_1 {
+    height: 1700px;
+}
+.place_picker_container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+.place_picker_container .one_option {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    border-radius: 1rem;
+    border: 1px solid var(--orange);
+    transition: all 0.5s;
+    text-align: center;
+}
+.place_picker_container .one_option.active{
+    border: 2px solid var(--orange);
+    transform: scale(0.95);
+    background-color: #fde8e1;
+}
+.place_picker_container .one_option input {
+    display: none;
+}
+.place_picker_container .one_option img {
+    width: 100%;
+}
+
 
 
 /*LINES*/
