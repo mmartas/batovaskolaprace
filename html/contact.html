@@ -62,55 +62,65 @@
             </div>
             <div class="contact_page_text_container one_section_text_container">
                 <form action="">
+                    <div class="first_3_inputs">
+                        <div class="number_of_people_container">
+                            <div class="input_box">
+                                <input type="number" id="first_option" required>
+                                <p>Počet osob: </p>
+                            </div>
+                        </div>
+                        <div class="date_container">
+                            <div class="input_box">
+                                <input type="datetime-local" id="first_option" required>
+                                <p>Datum a čas: </p>
+                            </div>
+                        </div>
+                        <div class="email_container">
+                            <div class="input_box">
+                                <input type="email" id="first_option" required>
+                                <p>Váš e-mail: </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
                     <p>Chci navštívit:</p>
                     <div class="place_picker_container">
-                        <label class="one_option" for="first_option">
+                        <label class="one_option_first one_option" for="first_option_place">
                             <p>Areál Baťovi školy práce</p>
-                            <input type="checkbox" name="" id="first_option">
+                            <input type="checkbox" name="" id="first_option_place">
                             <img src="../img/areal_skol.jpeg" alt="">
                         </label>
-                        <label class="one_option" for="first_option">
+                        <label class="one_option" for="first_option" >
                             <p>Baťův mrakodrap</p>
-                            <input type="checkbox" name="" id="first_option">
+                            <input type="checkbox" name="" id="second_option_place">
                             <img src="../img/jednadvacitka.jpg" alt="">
                         </label>
                         <label class="one_option" for="first_option">
                             <p>Památník Tomáše Bati</p>
-                            <input type="checkbox" name="" id="first_option">
+                            <input type="checkbox" name="" id="third_option_place">
                             <img src="../img/pamatnik.jpg" alt="">
                         </label>
                         <label class="one_option" for="first_option">
                             <p>14|15 Baťův institut</p>
-                            <input type="checkbox" name="" id="first_option">
+                            <input type="checkbox" name="" id="fourth_option_place">
                             <img src="../img/14_15_institut.jpg" alt="">
                         </label>
                         <label class="one_option" for="first_option">
                             <p>Baťovy domky</p>
-                            <input type="checkbox" name="" id="first_option">
+                            <input type="checkbox" name="" id="fifth_option_place">
                             <img src="../img/batovy_domky.jpg" alt="">
                         </label>
                         <label class="one_option" for="first_option">
                             <p>Letiště Tomáše Bati</p>
-                            <input type="checkbox" name="" id="first_option">
+                            <input type="checkbox" name="" id="sixth_option_place">
                             <img src="../img/letiste.jpg" alt="">
                         </label>
                         <label class="one_option" for="first_option">
                             <p>Univerzita Tomáše Bati</p>
-                            <input type="checkbox" name="" id="first_option">
+                            <input type="checkbox" name="" id="seventh_option_place">
                             <img src="../img/utb.jpg" alt="">
                         </label>
-                    </div>
-                    <div class="number_of_people_container">
-                        <label for="second_option">Počet osob: </label>
-                        <input type="number" id="second_option">
-                    </div>
-                    <div class="date_container">
-                        <label for="third_option">Datum a čas:</label>
-                        <input type="datetime-local" id="third_option">
-                    </div>
-                    <div class="email_container">
-                        <label for="fourth_option">Váš e-mail:</label>
-                        <input type="email">
                     </div>
                     <div class="submit_container">
                         <input type="submit" value="Chci si objednat průvodce!">

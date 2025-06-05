@@ -84,38 +84,43 @@ let gettingActivePlace = function(point, section){
     const activatingPoints = new IntersectionObserver(function(entries) {
     entries.forEach(function(entry){
         if (entry.isIntersecting) {
-            point.classList.add('active');
-            if(point == pointNoOne){
-                point.textContent = "1"
-            } else if(point == pointNoTwo){
-                point.textContent = "2"
-            } else if(point == pointNoThree){
-                point.textContent = "3"
-            } else if(point == pointNoFour){
-                point.textContent = "4"
-            } else if(point == pointNoFive){
+            if(point){
+                point.classList.add('active');
+                if(point == pointNoOne){
+                    point.textContent = "1"
+                } else if(point == pointNoTwo){
+                    point.textContent = "2"
+                } else if(point == pointNoThree){
+                    point.textContent = "3"
+                } else if(point == pointNoFour){
+                    point.textContent = "4"
+                } else if(point == pointNoFive){
                 point.textContent = "5"
-            } else if(point == pointNoSix){
-                point.textContent = "6"
-            } else if(point == pointNoSeven){
-                point.textContent = "7"
-            } else if(point == pointNoEight){
-                point.textContent = "8"
-            } else if(point == pointNoNine){
-                point.textContent = "9"
-            } else if(point == pointNoTen){
-                point.textContent = "10"
-            } else if(point == pointNoEleven){
-                point.textContent = "11"
+                } else if(point == pointNoSix){
+                    point.textContent = "6"
+                } else if(point == pointNoSeven){
+                    point.textContent = "7"
+                } else if(point == pointNoEight){
+                    point.textContent = "8"
+                } else if(point == pointNoNine){
+                    point.textContent = "9"
+                } else if(point == pointNoTen){
+                    point.textContent = "10"
+                } else if(point == pointNoEleven){
+                    point.textContent = "11"
+                }
             }
+            
         } else {
-            point.classList.remove("active")
-            point.textContent = ""
+            if(point){
+                point.classList.remove("active")
+                point.textContent = ""
+            }
         }
     });
     });
     
-    activatingPoints.observe(section);
+    if(section) activatingPoints.observe(section);
 }
 
 gettingActivePlace(pointNoZero, historyMainTitle)
@@ -132,3 +137,18 @@ gettingActivePlace(pointNoNine, historyNinthSection)
 gettingActivePlace(pointNoTen, historTenthSection)
 gettingActivePlace(pointNoEleven, historyEleventhSection)
 
+
+
+let firstPlacePicker = document.getElementById("first_option_place")
+
+let firstPlacePickerState = false;
+
+let fullFirstOption = document.querySelector(".one_option_first")
+
+firstPlacePicker.addEventListener("click", function(event){
+    if(firstPlacePicker.checked) {
+        fullFirstOption.style.borderColor = "var(--orange)"
+    } else {
+        fullFirstOption.style.borderColor = "#000"
+    }
+})

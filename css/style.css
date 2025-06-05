@@ -1023,7 +1023,7 @@ footer {
     flex-direction: column;
     padding: 1rem;
     border-radius: 1rem;
-    border: 1px solid var(--orange);
+    border: 1px solid #000;
     transition: all 0.5s;
     text-align: center;
 }
@@ -1033,11 +1033,79 @@ footer {
     background-color: #fde8e1;
 }
 .place_picker_container .one_option input {
-    display: none;
+    /* display: none; */
 }
 .place_picker_container .one_option img {
     width: 100%;
 }
+
+.first_3_inputs {
+    display: flex;
+    width: 100%;
+    gap: 1rem;
+}
+
+.number_of_people_container {
+    width: 33%;
+}
+.date_container {
+    width: 33%;
+}
+.email_container {
+    width: 33%;
+}
+
+.input_box {
+    position: relative;
+    width: 100%;
+}
+
+.input_box input {
+    background: transparent;
+    outline: none;
+    border: 1px solid #000;
+    font-family: "League Spartan";
+    font-weight: 300;
+    padding: 1rem;
+    border-radius: 15px;
+    font-size: 1.3rem;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 10;
+    position: relative;
+}
+
+.input_box input:valid,
+.input_box input:focus {
+    border-color: var(--orange);
+}
+
+.input_box p {
+    position: absolute;
+    margin: 0;
+    top: 18px;
+    left: 16px;
+    font-size: 1.3rem;
+    color: #000;
+    font-family: "League Spartan";
+    font-weight: 300;
+    transform: translate(0, 0);
+    transition: all 0.5s;
+    z-index: 9;
+}
+
+.input_box input:valid ~ p,
+.input_box input:focus ~ p {
+    color: #000;
+    background-color: var(--orange);
+    transform: translate(10px, -28px);
+    transition: all 0.5s;
+    padding: 0.2rem 0.5rem;
+    font-size: 1rem;
+    border-radius: 15px;
+    z-index: 11;
+}
+
 
 
 
