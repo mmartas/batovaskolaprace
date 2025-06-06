@@ -140,15 +140,48 @@ gettingActivePlace(pointNoEleven, historyEleventhSection)
 
 
 let firstPlacePicker = document.getElementById("first_option_place")
+let secondPlacePicker = document.getElementById("second_option_place")
+let thirdPlacePicker = document.getElementById("third_option_place")
+let fourthPlacePicker = document.getElementById("fourth_option_place")
+let fifthPlacePicker = document.getElementById("fifth_option_place")
+let sixthPlacePicker = document.getElementById("sixth_option_place")
+let seventhPlacePicker = document.getElementById("seventh_option_place")
+let eightPlacePicker = document.getElementById("eight_option_place")
 
 let firstPlacePickerState = false;
+let secondPlacePickerState = false;
+let thirdPlacePickerState = false;
+let fourthPlacePickerState = false;
+let fifthPlacePickerState = false;
+let sixthPlacePickerState = false;
+let seventhPlacePickerState = false;
+let eightPlacePickerState = false;
 
 let fullFirstOption = document.querySelector(".one_option_first")
+let fullSecondOption = document.querySelector(".one_option_second")
+let fullThirdOption = document.querySelector(".one_option_third")
+let fullFourthOption = document.querySelector(".one_option_fourth")
+let fullFifthOption = document.querySelector(".one_option_fifth")
+let fullSixthOption = document.querySelector(".one_option_sixth")
+let fullSeventhOption = document.querySelector(".one_option_seventh")
+let fullEightOption = document.querySelector(".one_option_eight")
 
-firstPlacePicker.addEventListener("click", function(event){
-    if(firstPlacePicker.checked) {
-        fullFirstOption.style.borderColor = "var(--orange)"
+
+let gettingPickedOption = function(wholeOption, inputOption){
+    wholeOption.addEventListener("click", function(event){
+    if(inputOption.checked) {
+        wholeOption.classList.add("active")
     } else {
-        fullFirstOption.style.borderColor = "#000"
+        wholeOption.classList.remove("active")
     }
-})
+    })
+}
+
+gettingPickedOption(fullFirstOption, firstPlacePicker)
+gettingPickedOption(fullSecondOption, secondPlacePicker)
+gettingPickedOption(fullThirdOption, thirdPlacePicker)
+gettingPickedOption(fullFourthOption, fourthPlacePicker)
+gettingPickedOption(fullFifthOption, fifthPlacePicker)
+gettingPickedOption(fullSixthOption, sixthPlacePicker)
+gettingPickedOption(fullSeventhOption, seventhPlacePicker)
+gettingPickedOption(fullEightOption, eightPlacePicker)

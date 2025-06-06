@@ -1010,6 +1010,12 @@ footer {
 .contact_page_section_1 {
     height: 1700px;
 }
+
+.contact_page_text_container form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
 .place_picker_container {
     width: 100%;
     display: flex;
@@ -1018,25 +1024,28 @@ footer {
     gap: 1rem;
 }
 .place_picker_container .one_option {
-    width: 400px;
+    width: 300px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     padding: 1rem;
     border-radius: 1rem;
     border: 1px solid #000;
     transition: all 0.5s;
     text-align: center;
+    cursor: pointer;
 }
 .place_picker_container .one_option.active{
-    border: 2px solid var(--orange);
+    border: 1px solid var(--orange);
     transform: scale(0.95);
     background-color: #fde8e1;
 }
 .place_picker_container .one_option input {
-    /* display: none; */
+    display: none;
 }
 .place_picker_container .one_option img {
     width: 100%;
+    border-radius: 1rem;
 }
 
 .first_3_inputs {
@@ -1080,7 +1089,8 @@ footer {
     border-color: var(--orange);
 }
 
-.input_box p {
+.input_box p,
+.input_box label {
     position: absolute;
     margin: 0;
     top: 18px;
@@ -1094,8 +1104,16 @@ footer {
     z-index: 9;
 }
 
+.input_box label {
+    z-index: 11 !important;
+    background-color: rgb(249, 249, 249);
+    width: 200px;
+}
+
 .input_box input:valid ~ p,
-.input_box input:focus ~ p {
+.input_box input:focus ~ p,
+.input_box input:valid ~ label,
+.input_box input:focus ~ label {
     color: #000;
     background-color: var(--orange);
     transform: translate(10px, -28px);
@@ -1104,6 +1122,26 @@ footer {
     font-size: 1rem;
     border-radius: 15px;
     z-index: 11;
+}
+
+
+.submit_container input {
+    padding: 0.5rem 1rem;
+    border-radius: 15px;
+    border: 1px solid #000;
+    font-family: "League Spartan";
+    font-weight: 300;
+    background: transparent;
+    font-size: 1.5rem;
+    width: 100%;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.submit_container input:hover {
+    border-color: var(--orange);
+    color: var(--orange);
 }
 
 
