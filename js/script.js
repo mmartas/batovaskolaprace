@@ -168,13 +168,15 @@ let fullEightOption = document.querySelector(".one_option_eight")
 
 
 let gettingPickedOption = function(wholeOption, inputOption){
-    wholeOption.addEventListener("click", function(event){
-    if(inputOption.checked) {
-        wholeOption.classList.add("active")
-    } else {
-        wholeOption.classList.remove("active")
+    if(wholeOption){
+        wholeOption.addEventListener("click", function(event){
+            if(inputOption.checked) {
+                wholeOption.classList.add("active")
+            } else {
+                wholeOption.classList.remove("active")
+            }
+        })
     }
-    })
 }
 
 gettingPickedOption(fullFirstOption, firstPlacePicker)
@@ -185,3 +187,46 @@ gettingPickedOption(fullFifthOption, fifthPlacePicker)
 gettingPickedOption(fullSixthOption, sixthPlacePicker)
 gettingPickedOption(fullSeventhOption, seventhPlacePicker)
 gettingPickedOption(fullEightOption, eightPlacePicker)
+
+
+
+
+window.addEventListener('DOMContentLoaded', () => {
+    const galerie = document.querySelectorAll('.galerie img');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    let currentIndex = 0;
+
+    galerie.forEach((img, index) => {
+        img.addEventListener('click', () => {
+            currentIndex = index;
+            showImage();
+        });
+    });
+
+    function showImage() {
+        lightbox.style.display = 'flex';
+        lightboxImg.src = galerie[currentIndex].src;
+    }
+
+    function closeLightbox() {
+        lightbox.style.display = 'none';
+    }
+
+    function changeImage(direction) {
+        currentIndex += direction;
+        if (currentIndex < 0) currentIndex = galerie.length - 1;
+        if (currentIndex >= galerie.length) currentIndex = 0;
+        showImage();
+    }
+
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox || e.target.classList.contains('close')) {
+            closeLightbox();
+        }
+    });
+
+    // Export funkcí do global scope, pokud jsou volány v HTML onclick=""
+    window.closeLightbox = closeLightbox;
+    window.changeImage = changeImage;
+});
