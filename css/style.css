@@ -676,7 +676,6 @@ main {
     display: flex;
     gap: 10px;
     width: fit-content;
-    
     align-items: center;
     transform: translateX(0);
     transition: all 0.5s;

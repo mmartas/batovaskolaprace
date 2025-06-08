@@ -1,3 +1,4 @@
+// RESPONZIVNÍ HAMBURGER MENU
 let hamburgerMenu = document.querySelector("#hamburger_menu")
 let navBarMenu = document.querySelector(".nav_bar_menu")
 
@@ -6,12 +7,11 @@ hamburgerMenu.addEventListener("click", function(event){
     navBarMenu.classList.toggle("active")
 })
 
+
+// POSOUVÁNÍ OBRÁZKŮ V SEKCI FOTOGRAFIE NA HLAVNÍ STRANĚ
 let galleryRightArrow = document.querySelector(".fa-solid.fa-arrow-right")
-
 let galleryLeftArrow = document.querySelector(".fa-solid.fa-arrow-left")
-
 let galleryLine = document.querySelector(".gallery_photos")
-
 let pixelNumber = 0
 
 if(galleryRightArrow){
@@ -32,7 +32,7 @@ if(galleryLeftArrow){
 })
 }
 
-
+// ŠIPKA PRO SCROLL ZPĚT NA VRCH STRÁNKY
 let arrowToScrollTop = document.getElementById("arrowScrollToTop")
 
 window.addEventListener("scroll", function(event){
@@ -51,6 +51,7 @@ arrowToScrollTop.addEventListener("click", function(event){
 })
 
 
+// NAVBAR NA LEVÉ STRANĚ S KOLEČKAMA
 let pointNoZero = document.getElementById("first_point")
 let pointNoOne = document.getElementById("second_point")
 let pointNoTwo = document.getElementById("third_point")
@@ -78,7 +79,6 @@ let historyNinthSection = document.getElementById("Section9")
 let historTenthSection = document.getElementById("Section10")
 let historyEleventhSection = document.getElementById("Section11")
 let historyFooter = document.getElementById("Footer")
-
 
 let gettingActivePlace = function(point, section){
     const activatingPoints = new IntersectionObserver(function(entries) {
@@ -110,7 +110,6 @@ let gettingActivePlace = function(point, section){
                     point.textContent = "11"
                 }
             }
-            
         } else {
             if(point){
                 point.classList.remove("active")
@@ -139,6 +138,8 @@ gettingActivePlace(pointNoEleven, historyEleventhSection)
 
 
 
+
+// SEKCE KONTAKTY - VYBÍRÁNÍ MÍST NA PROHLÍDKU
 let firstPlacePicker = document.getElementById("first_option_place")
 let secondPlacePicker = document.getElementById("second_option_place")
 let thirdPlacePicker = document.getElementById("third_option_place")
@@ -165,7 +166,6 @@ let fullFifthOption = document.querySelector(".one_option_fifth")
 let fullSixthOption = document.querySelector(".one_option_sixth")
 let fullSeventhOption = document.querySelector(".one_option_seventh")
 let fullEightOption = document.querySelector(".one_option_eight")
-
 
 let gettingPickedOption = function(wholeOption, inputOption){
     if(wholeOption){
