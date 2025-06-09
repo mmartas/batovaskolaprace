@@ -677,12 +677,11 @@ main {
     gap: 10px;
     width: fit-content;
     align-items: center;
-    transform: translateX(0);
+    transform: translateX(-1000px);
     transition: all 0.5s;
 }
 
 .rolling_photos_right{
-    transform: translateX(-140px);
     transition: all 0.5s;
 }
 
@@ -699,16 +698,7 @@ main {
     cursor: pointer;
 }
 
-.gallery_photos .image1,
-.gallery_photos .image2,
-.gallery_photos .image3,
-.gallery_photos .image4,
-.gallery_photos .image5,
-.gallery_photos .image6,
-.gallery_photos .image7,
-.gallery_photos .image8,
-.gallery_photos .image9,
-.gallery_photos .image10 {
+.gallery_photos .image {
     overflow: hidden;
 }
 
@@ -723,6 +713,27 @@ main {
     opacity: 1;
     transform: scale(1);
     
+}
+
+.gallery_photos .image0 {
+    width: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery_photos .image0 a {
+    display: flex;
+    gap: 10px;
+
+}
+
+.gallery_photos .image0 a span {
+    display: block;
+    height: 10px;
+    width: 10px;
+    background-color: var(--orange);
+    border-radius: 50%;
 }
 
 /* HLAVNÍ STRÁNKA - 3.SEKCE */
@@ -817,6 +828,9 @@ footer {
     color: #000;
     font-family: "League Spartan";
     font-weight: 300;
+}
+.footer_links ul li a:hover {
+    color: var(--orange);
 }
 
 .footer_newsletter {
@@ -913,6 +927,12 @@ footer {
     color: var(--orange);
 }
 
+#message_place {
+    color: #000;
+    margin: 0;
+    font-size: 1.2rem;
+}
+
 .footer_contact {
     width: 33%;
     display: flex;
@@ -940,7 +960,9 @@ footer {
 .footer_contact .icons i{
     font-size: 2rem;
 }
-
+.footer_contact .icons i:hover {
+    color: var(--orange);
+}
 .footer_copyright_section {
     display: flex;
     justify-content: center;
@@ -1164,9 +1186,45 @@ footer {
     color: var(--orange);
 }
 
+#ordering_message {
+    text-align: center;
+    margin-top: 1rem;
+}
+
 /* SUBPAGE fotogalerie   */
 .fotogallery_section_1 {
-    height: 1100px;
+    height: 1500px;
+}
+.fotogallery_section_2 {
+    height: 800px;
+}
+
+
+.gallery_page_photos .image {
+    overflow: hidden;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.gallery_page_photos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.gallery_page_photos img {
+    width: 250px;
+    height: auto;
+    opacity: 0.5;
+    transform: scale(1.25);
+    transition: all 0.5s;
+    border-radius: 1rem;
+}
+
+.gallery_page_photos img:hover {
+    opacity: 1;
+    transform: scale(1);
 }
 
 
@@ -1299,23 +1357,7 @@ footer {
 
 
 
-.galerie {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    padding: 20px;
-}
 
-.galerie img {
-    width: 200px;
-    cursor: pointer;
-    border-radius: 10px;
-    transition: transform 0.2s;
-}
-
-.galerie img:hover {
-    transform: scale(1.05);
-}
 
 .lightbox {
     display: none;

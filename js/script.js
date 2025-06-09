@@ -12,22 +12,28 @@ hamburgerMenu.addEventListener("click", function(event){
 let galleryRightArrow = document.querySelector(".fa-solid.fa-arrow-right")
 let galleryLeftArrow = document.querySelector(".fa-solid.fa-arrow-left")
 let galleryLine = document.querySelector(".gallery_photos")
-let pixelNumber = 0
+let pixelNumber = -1000;
 
 if(galleryRightArrow){
     galleryRightArrow.addEventListener("click", function(event){
-    if(pixelNumber > -3290){
-        pixelNumber -= 140
+    if(pixelNumber > -4150){
+        pixelNumber -= 450
         galleryLine.style.transform = `translateX(${pixelNumber}px)`
+        if(pixelNumber == -4150){
+            galleryRightArrow.style.display = "none"
+        }
     }
 })
 }
 
 if(galleryLeftArrow){
     galleryLeftArrow.addEventListener("click", function(event){
-    if(!pixelNumber == 0){
-        pixelNumber += 140
+    if(pixelNumber < -100){
+        pixelNumber += 450
         galleryLine.style.transform = `translateX(${pixelNumber}px)`
+        if(pixelNumber == -100){
+            galleryLeftArrow.style.display = "none"
+        }
     }
 })
 }
@@ -192,7 +198,7 @@ gettingPickedOption(fullEightOption, eightPlacePicker)
 
 
 window.addEventListener('DOMContentLoaded', () => {
-    const galerie = document.querySelectorAll('.galerie img');
+    const galerie = document.querySelectorAll('.gallery_page_photos img');
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
     let currentIndex = 0;
@@ -230,3 +236,22 @@ window.addEventListener('DOMContentLoaded', () => {
     window.closeLightbox = closeLightbox;
     window.changeImage = changeImage;
 });
+
+
+// input[type='submit']
+
+let newsletterSubmit = document.querySelector(".footer_newsletter form")
+let newsletterSubmitMessagePlace = document.querySelector("#message_place")
+
+newsletterSubmit.addEventListener("submit", function(event){
+    event.preventDefault()
+    newsletterSubmitMessagePlace.textContent = "Děkujeme, byl jsi přihlášen k odběru novinek."
+})
+
+let orderGuideSubmit = document.querySelector(".contact_page_text_container form")
+let orderGuideMessagePlace = document.querySelector("#ordering_message")
+
+orderGuideSubmit.addEventListener("submit", function(event){
+    event.preventDefault()
+    orderGuideMessagePlace.textContent = "Váš požadavek zpracujeme a budete kontaktováni."
+})
