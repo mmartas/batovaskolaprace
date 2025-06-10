@@ -5,6 +5,11 @@ let navBarMenu = document.querySelector(".nav_bar_menu")
 hamburgerMenu.addEventListener("click", function(event){
     hamburgerMenu.classList.toggle("active")
     navBarMenu.classList.toggle("active")
+    if(navBarMenu.classList.contains("active")){
+        document.body.classList.add("noscroll")
+    } else {
+        document.body.classList.remove("noscroll")
+    }
 })
 
 
