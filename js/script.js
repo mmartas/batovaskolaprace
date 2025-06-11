@@ -61,7 +61,6 @@ arrowToScrollTop.addEventListener("click", function(event){
     })
 })
 
-
 // NAVBAR NA LEVÉ STRANĚ S KOLEČKAMA
 let pointNoZero = document.getElementById("first_point")
 let pointNoOne = document.getElementById("second_point")
@@ -129,7 +128,6 @@ let gettingActivePlace = function(point, section){
         }
     });
     });
-    
     if(section) activatingPoints.observe(section);
 }
 
@@ -146,9 +144,6 @@ gettingActivePlace(pointNoEight, historyEighthSection)
 gettingActivePlace(pointNoNine, historyNinthSection)
 gettingActivePlace(pointNoTen, historTenthSection)
 gettingActivePlace(pointNoEleven, historyEleventhSection)
-
-
-
 
 // SEKCE KONTAKTY - VYBÍRÁNÍ MÍST NA PROHLÍDKU
 let firstPlacePicker = document.getElementById("first_option_place")
@@ -199,64 +194,53 @@ gettingPickedOption(fullSixthOption, sixthPlacePicker)
 gettingPickedOption(fullSeventhOption, seventhPlacePicker)
 gettingPickedOption(fullEightOption, eightPlacePicker)
 
+// LIGHTBOX - STRÁNKA FOTOGALERIE
+const galerie = document.querySelectorAll('.gallery_page_photos img');
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+let currentIndex = 0;
 
-
-
-window.addEventListener('DOMContentLoaded', () => {
-    const galerie = document.querySelectorAll('.gallery_page_photos img');
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightbox-img');
-    let currentIndex = 0;
-
-    galerie.forEach((img, index) => {
-        img.addEventListener('click', () => {
-            currentIndex = index;
-            showImage();
-        });
-    });
-
-    function showImage() {
-        lightbox.style.display = 'flex';
-        lightboxImg.src = galerie[currentIndex].src;
-    }
-
-    function closeLightbox() {
-        lightbox.style.display = 'none';
-    }
-
-    function changeImage(direction) {
-        currentIndex += direction;
-        if (currentIndex < 0) currentIndex = galerie.length - 1;
-        if (currentIndex >= galerie.length) currentIndex = 0;
+galerie.forEach((img, index) => {
+    img.addEventListener('click', () => {
+        currentIndex = index;
         showImage();
-    }
-
-    lightbox.addEventListener('click', (e) => {
-        if (e.target === lightbox || e.target.classList.contains('close')) {
-            closeLightbox();
-        }
     });
-
-    // Export funkcí do global scope, pokud jsou volány v HTML onclick=""
-    window.closeLightbox = closeLightbox;
-    window.changeImage = changeImage;
 });
 
+function showImage() {
+    lightbox.style.display = 'flex';
+    lightboxImg.src = galerie[currentIndex].src;
+}
 
-// input[type='submit']
+function closeLightbox() {
+    lightbox.style.display = 'none';
+}
 
+function changeImage(direction) {
+    currentIndex += direction;
+    if (currentIndex < 0) currentIndex = galerie.length - 1;
+    if (currentIndex >= galerie.length) currentIndex = 0;
+    showImage();
+}
+
+lightbox.addEventListener('click', (event) => {
+    if (event.target === lightbox || event.target.classList.contains('close')) {
+        closeLightbox();
+    }
+});
+
+// ODESLÁNÍ FORMULÁŘŮ
 let newsletterSubmit = document.querySelector(".footer_newsletter form")
 let newsletterSubmitMessagePlace = document.querySelector("#message_place")
-
-newsletterSubmit.addEventListener("submit", function(event){
-    event.preventDefault()
-    newsletterSubmitMessagePlace.textContent = "Děkujeme, byl jsi přihlášen k odběru novinek."
-})
-
 let orderGuideSubmit = document.querySelector(".contact_page_text_container form")
 let orderGuideMessagePlace = document.querySelector("#ordering_message")
 
-orderGuideSubmit.addEventListener("submit", function(event){
-    event.preventDefault()
-    orderGuideMessagePlace.textContent = "Váš požadavek zpracujeme a budete kontaktováni."
-})
+function enterForm(submitForm, placeForMessage, message) {
+    submitForm.addEventListener("submit", function(event){
+        event.preventDefault()
+        placeForMessage.textContent = message
+    })
+}
+
+enterForm(newsletterSubmit, newsletterSubmitMessagePlace, "Děkujeme, byl jsi přihlášen k odběru novinek.")
+enterForm(orderGuideSubmit, orderGuideMessagePlace, "Váš požadavek zpracujeme a budete kontaktováni.")

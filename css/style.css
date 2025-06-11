@@ -739,8 +739,16 @@ main {
         top: 1600px !important;
     }
 
-    #Section1.subpage_title_text {
+    /* #Section1.subpage_title_text {
         margin-top: 20px !important;
+    } */
+
+    .fotogallery_section_1 .subpage_title_text, .fotogallery_section_2 .subpage_title_text, .contact_page_section_1 .subpage_title_text {
+        margin-top: 20px !important;
+    }
+
+    .bata_section_1 .subpage_title_text, .bata_section_2 .subpage_title_text, .bata_section_4 .subpage_title_text, .bata_section_8 .subpage_title_text, .bata_section_9 .subpage_title_text {
+        margin-top: 10px !important;
     }
 }
 @media only screen and (max-width: 550px){
@@ -763,6 +771,8 @@ main {
     .right_present_line_straight {
         top: 1800px !important;
     }
+
+    
 }
 
 #subpage_side_navigator {
