@@ -223,11 +223,14 @@ function changeImage(direction) {
     showImage();
 }
 
-lightbox.addEventListener('click', (event) => {
-    if (event.target === lightbox || event.target.classList.contains('close')) {
-        closeLightbox();
-    }
-});
+if(lightbox){
+    lightbox.addEventListener('click', (event) => {
+        if (event.target === lightbox || event.target.classList.contains('close')) {
+            closeLightbox();
+        }
+    });
+}
+
 
 // ODESLÁNÍ FORMULÁŘŮ
 let newsletterSubmit = document.querySelector(".footer_newsletter form")
